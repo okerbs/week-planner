@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Planificador Semanal</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+    <script defer src="app.js"></script>
+</head>
+<body>
+    <div class="main">
+        <div class="column-container">
+            <div class="objectives">
+                <h2>Objetivos</h2><button id="add-objective" class="plus-obj">+</button>
+                <p>Lo que quiero lograr</p>
+            </div>
+            <div class="list">
+                
+            </div>
+        </div>
+        <div class="tasks-container">
+            <div class="week-plan">
+                <h2>Planificador semanal</h2>
+                <p>Semana del <input type="number" placeholder="1"> al <input type="number" placeholder="7"> de <input type="text" placeholder="enero" spellcheck="false"></p>
+            </div>
+            <div class="tasks">
+                <div class="week-day">
+                    <p class="monday-add">Lunes <button id="add-task-monday" class="plus-task">+</button></p>
+                    <!-- aca van las tarjetas -->                  
+                </div>
+                <div class="week-day">
+                    <p class="tuesday-add">Martes <button id="add-task-tuesday" class="plus-task">+</button></p>
+                    <!-- aca van las tarjetas -->
+                </div>
+                <div class="week-day">
+                    <p class="wednesday-add">Miércoles <button id="add-task-wednesday" class="plus-task">+</button></p>
+                    <!-- aca van las tarjetas -->
+                    
+                </div>
+                <div class="week-day">
+                    <p class="thursday-add">Jueves <button id="add-task-thursday" class="plus-task">+</button></p>
+                    <!-- aca van las tarjetas -->
+                </div>
+                <div class="week-day">
+                    <p class="friday-add">Viernes <button id="add-task-friday" class="plus-task">+</button></p>
+                    <!-- aca van las tarjetas -->
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="author">
+        <p>Made by <a href="https://github.com/okerbs" target="_blank">okerbs</a></p>
+    </div>
+
+</body>
+</html>

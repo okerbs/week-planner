@@ -1,4 +1,6 @@
 # week-planner
-Week planner made with CSS using flexbox / JavaScript vanilla
+You can use it to add objectives and tasks for the week.
 
-Inspired with a mockup that I found on the internet. I used CSS, JS, and Adobe Illustrator for the background.
+Made with CSS using flexbox / JavaScript vanilla.
+
+https://okerbs.github.io/week-planner/

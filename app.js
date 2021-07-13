@@ -30,7 +30,7 @@ function addObjective () {
     }
 }
 
-// agrega tarjetas en las columnas del dia que corresponda, y crea un botón para eleminar
+// agrega tarjetas en las columnas del dia que corresponda y crea un botón para eleminar segun el botón del dia en el cual se haga click
 
 const monBtn = document.querySelector('#add-task-monday');
 monBtn.addEventListener('click', addTaskCard);
@@ -49,10 +49,14 @@ const wed = document.querySelector('.wednesday-add');
 const thu = document.querySelector('.thursday-add');
 const fri = document.querySelector('.friday-add');
 
-function addTaskCard (mon, tue, wed, thu, fri) {
+function addTaskCard () {
     const newCard = document.createElement('div');
     newCard.className = 'task-card';
-    this.insertAdjacentElement('afterend', newCard);
+    monBtn.onclick = function() {mon.insertAdjacentElement('afterend', newCard);};
+    tueBtn.onclick = function() {tue.insertAdjacentElement('afterend', newCard);};
+    wedBtn.onclick = function() {wed.insertAdjacentElement('afterend', newCard);};
+    thuBtn.onclick = function() {thu.insertAdjacentElement('afterend', newCard);};
+    friBtn.onclick = function() {fri.insertAdjacentElement('afterend', newCard);};
 
     const innerButton = document.createElement('button');
     innerButton.className = 'delete-btn-task';

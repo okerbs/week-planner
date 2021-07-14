@@ -1,14 +1,14 @@
 // agrega inputs en la columna de 'Objetivos' y crea un botón para eliminar
 
-const buttonObjective = document.querySelector('#add-objective');
+let buttonObjective = document.querySelector('#add-objective');
 buttonObjective.addEventListener('click', addObjective);
 
 function addObjective () {
-    const list = document.querySelector('.list');
-    const element = document.createElement('p');
+    let list = document.querySelector('.list');
+    let element = document.createElement('p');
     list.appendChild(element);
     
-    const innerElement = document.createElement('i');
+    let innerElement = document.createElement('i');
     innerElement.textContent = '';
     innerElement.className = 'check-box';
     element.appendChild(innerElement);
@@ -20,7 +20,7 @@ function addObjective () {
     newGoal.setAttribute('spellcheck', 'false');
     innerElement.insertAdjacentElement('afterend', newGoal);
 
-    const innerButton = document.createElement('button');
+    let innerButton = document.createElement('button');
     innerButton.textContent = 'X';
     innerButton.className = 'delete-btn';
     newGoal.insertAdjacentElement('afterend', innerButton);
@@ -32,38 +32,38 @@ function addObjective () {
 
 // agrega tarjetas en las columnas del dia que corresponda y crea un botón para eleminar segun el botón del dia en el cual se haga click
 
-const monBtn = document.querySelector('#add-task-monday');
+let monBtn = document.querySelector('#add-task-monday');
 monBtn.addEventListener('click', addTaskCard);
-const tueBtn = document.querySelector('#add-task-tuesday');
+let tueBtn = document.querySelector('#add-task-tuesday');
 tueBtn.addEventListener('click', addTaskCard);
-const wedBtn = document.querySelector('#add-task-wednesday');
+let wedBtn = document.querySelector('#add-task-wednesday');
 wedBtn.addEventListener('click', addTaskCard);
-const thuBtn = document.querySelector('#add-task-thursday');
+let thuBtn = document.querySelector('#add-task-thursday');
 thuBtn.addEventListener('click', addTaskCard);
-const friBtn = document.querySelector('#add-task-friday');
+let friBtn = document.querySelector('#add-task-friday');
 friBtn.addEventListener('click', addTaskCard);
 
-const mon = document.querySelector('.monday-add');
-const tue = document.querySelector('.tuesday-add');
-const wed = document.querySelector('.wednesday-add');
-const thu = document.querySelector('.thursday-add');
-const fri = document.querySelector('.friday-add');
+const MON = document.querySelector('.monday-add');
+const TUE = document.querySelector('.tuesday-add');
+const WED = document.querySelector('.wednesday-add');
+const THU = document.querySelector('.thursday-add');
+const FRI = document.querySelector('.friday-add');
 
 function addTaskCard () {
-    const newCard = document.createElement('div');
+    let newCard = document.createElement('div');
     newCard.className = 'task-card';
-    monBtn.onclick = function() {mon.insertAdjacentElement('afterend', newCard);};
-    tueBtn.onclick = function() {tue.insertAdjacentElement('afterend', newCard);};
-    wedBtn.onclick = function() {wed.insertAdjacentElement('afterend', newCard);};
-    thuBtn.onclick = function() {thu.insertAdjacentElement('afterend', newCard);};
-    friBtn.onclick = function() {fri.insertAdjacentElement('afterend', newCard);};
+    monBtn.onclick = function() {MON.insertAdjacentElement('afterend', newCard);};
+    tueBtn.onclick = function() {TUE.insertAdjacentElement('afterend', newCard);};
+    wedBtn.onclick = function() {WED.insertAdjacentElement('afterend', newCard);};
+    thuBtn.onclick = function() {THU.insertAdjacentElement('afterend', newCard);};
+    friBtn.onclick = function() {FRI.insertAdjacentElement('afterend', newCard);};
 
-    const innerButton = document.createElement('button');
+    let innerButton = document.createElement('button');
     innerButton.className = 'delete-btn-task';
     innerButton.textContent = 'X';
     newCard.appendChild(innerButton);
 
-    const addTaskDescription = document.createElement('div');
+    let addTaskDescription = document.createElement('div');
     addTaskDescription.className = 'task-description';
     innerButton.insertAdjacentElement('afterend', addTaskDescription);
 
@@ -73,7 +73,7 @@ function addTaskCard () {
     inputTask.setAttribute('maxlength', '15');
     addTaskDescription.insertAdjacentElement('afterbegin', inputTask);
 
-    const taskBody = document.createElement('div');
+    let taskBody = document.createElement('div');
     taskBody.className = 'task-body';
     inputTask.insertAdjacentElement('afterend', taskBody);
 
@@ -83,7 +83,7 @@ function addTaskCard () {
     inputTime.setAttribute('maxlength', '7');
     taskBody.insertAdjacentElement('afterbegin', inputTime);
 
-    const newP = document.createElement('p');
+    let newP = document.createElement('p');
     inputTime.insertAdjacentElement('afterend', newP);
 
     let textDescription = document.createElement('textarea');
